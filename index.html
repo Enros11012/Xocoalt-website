@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xocoatl</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a la fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Imagenes/Logo2.png" alt="Xocoatl Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#historia">Historia de Xocoatl</a></li>
+            </ul>
+        </nav>
+        <div class="right-panel">
+            <input type="text" placeholder="Buscar producto..." id="search-bar">
+            <div class="cart-icon" onclick="toggleCart()">
+                <img src="Imagenes/Bolsa.png" alt="Bolsa de Compras">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="centered-section">
+            <h1>Bienvenidos a Xocoatl</h1>
+            <p>Descubre el sabor auténtico del chocolate gourmet.</p>
+        </section>
+
+        <section id="productos" class="centered-section">
+            <h2>Nuestros Productos</h2>
+            <div class="product-list">
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate 1.jpg" alt="Producto 1">
+                    <h3>Caja sorpresa</h3>
+                    <p>Consta de un surtido de nuestros diversos chocolates. Ideal para compartir en familia.</p>
+                    <p class="price">$200.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate2.jpg" alt="Producto 2">
+                    <h3>Selecto</h3>
+                    <p>Nuestra alta calidad en la selección de frutos secos y semillas, le permitirá experimentar una explosión de sabores en su paladar.</p>
+                    <p class="price">$285.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate3.jpg" alt="Producto 3">
+                    <h3>Dark</h3>
+                    <p>Para los amantes del chocolate amargo. Una combinación de sabores exóticos con el sabor fuerte de un buen cacao tostado.</p>
+                    <p class="price">$420.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate4.jpg" alt="Producto 4">
+                    <h3>Lindor</h3>
+                    <p>Una tablilla de chocolate con un toque de licor de Vodka, con una ligera capa de almendras.</p>
+                    <p class="price">$185.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate5.jpg" alt="Producto 5">
+                    <h3>Encanto</h3>
+                    <p>Nuestras tablillas clásicas con frutos secos, un sabor dulce y cremoso de nuestro chocolate.</p>
+                    <p class="price">$135.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate6.jpg" alt="Producto 6">
+                    <h3>Mexica</h3>
+                    <p>Exóticos chocolates mexicanos con chapulín, ajo, chile y tequila.</p>
+                    <p class="price">$320.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate7.jpg" alt="Producto 7">
+                    <h3>Clásico</h3>
+                    <p>Chocolate con 75% de cacao, azúcar y canela. Elaborado artesanalmente, es nuestro gran clásico de nuestra chocolatería.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                <div class="producto-item">
+                    <img src="Imagenes/Chocolate8.jpg" alt="Producto 8">
+                    <h3>Trufas</h3>
+                    <p>Dulces trufas rellenas de un cremoso y suave crema de frutos rojos.</p>
+                    <p class="price">$140.00</p>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="centered-section">
+            <h2>Historia de Xocoatl</h2>
+            <div id="login">
+                <h3>Iniciar sesión</h3>
+                <form id="login-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="phone">Número telefónico:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Xocoatl. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Carrito de compras -->
+    <div id="cart" class="cart">
+        <button id="close-cart" onclick="toggleCart()">Cerrar</button>
+        <h2>Carrito</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0.00</p>
+        <button id="checkout">Pagar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
